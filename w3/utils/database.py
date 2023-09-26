@@ -111,9 +111,9 @@ class DB:
         """
     ######################################## YOUR CODE HERE ##################################################
     #post message updating percentage
-        self._connection.execute(f''' 
-                                 UPDATE {self._table_name} SET percentage = '{percentage}' where process_id = '{process_id}'
-                                 ;''')
+        self._connection.execute(f'''
+                                 UPDATE {self._table_name} SET percentage = '{percentage}' 
+                                 WHERE process_id = '{process_id}';''')
         self._connection.commit()
     ######################################## YOUR CODE HERE ##################################################
 
