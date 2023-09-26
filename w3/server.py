@@ -67,7 +67,7 @@ async def get() -> List[ProcessStatus]:
     Get all the records from the process table and return it using the pydantic model ProcessStatus
     """
     ######################################## YOUR CODE HERE ##################################################
-    db = DB()
+    db = DB('database.sqlite')
     processes = db.read_all()
     return [ProcessStatus(**process) for process in processes]
     ######################################## YOUR CODE HERE ##################################################
